@@ -1,4 +1,4 @@
-package fj11;
+package cap2;
 
 public class MeuPrograma {
 	public static void main(String[] args) {

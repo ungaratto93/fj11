@@ -11,23 +11,19 @@ public class Desafio1 {
 	}
 
 	private static final long sequence(int n) {
-		long seq = 0;
-		int sum = 0;
 		int n1 = 0;
 		int n2 = 1;
 
+		long seq = 0;
 		while (seq < n - 1) {
-
-			sum = n1 + n2;
 			if (seq % 2 == 0) {
-				n1 = sum;
+				n1 = n1 + n2;
 			} else {
-				n2 = sum;
+				n2 = n1 + n2;
 			}
-
 			seq++;
 		}
 
-		return sum;
+		return n1 + n2;
 	}
 }

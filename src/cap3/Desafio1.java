@@ -3,20 +3,31 @@ package cap3;
 
 public class Desafio1 {
 	public static void main(String[] args) {
-		for (int indexador = 1; indexador <= 40; indexador++ ) {
-			calculaFatorial(indexador);
+		int index = 0;
+		while(index <= 100) {
+			System.out.println(Math.abs(sequence(index)));
+			index++;
 		}
-	}
-	
-	private static void calculaFatorial(int fator) {
-		long aux = fator;
-		for (int index = fator; index > 1; index--) {
-			aux = (aux * ( index - 1));
-		}
-		exibeResultado(fator, aux);
 	}
 
-	private static void exibeResultado(int fator, long resultado) {
-		System.out.println("O fatorial de " + fator + " é " + resultado);
+	private static final long sequence(int n) {
+		long seq = 0;
+		int sum = 0;
+		int n1 = 0;
+		int n2 = 1;
+
+		while (seq < n - 1) {
+
+			sum = n1 + n2;
+			if (seq % 2 == 0) {
+				n1 = sum;
+			} else {
+				n2 = sum;
+			}
+
+			seq++;
+		}
+
+		return sum;
 	}
 }

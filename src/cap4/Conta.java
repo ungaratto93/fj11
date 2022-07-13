@@ -7,13 +7,19 @@ public class Conta {
 	double saldo;
 	String dataAbertura;
 
-	public void sacar(double quantiade) {
+	public void sacar(double quantidade) {
+		if (this.saldo > quantidade) {
+			this.saldo = this.saldo - quantidade;
+		} else {
+			throw new IllegalArgumentException("Saldo insuficiente para completar a operacao");
+		}
 	};
 
 	public void depositar(double quantidade) {
+		this.saldo = this.saldo + quantidade;
 	};
 
 	public double calculaRendimento() {
-		return 0.0;
+		return this.saldo * 0.1;
 	};
 }

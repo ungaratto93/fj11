@@ -21,5 +21,13 @@ public class Conta {
 
 	public double calculaRendimento() {
 		return this.saldo * 0.1;
+	}
+
+	public String recuperaDadosParaImpressao() {
+		return "Titular:" + this.nomeTitular +
+				" Numero: " + this.numero +
+				" Agencia: " + this.agencia + 
+				" Saldo: " + this.saldo + 
+				" Data Abertura: " + this.dataAbertura;
 	};
 }

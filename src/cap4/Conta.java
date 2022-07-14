@@ -5,7 +5,7 @@ public class Conta {
 	int numero;
 	String agencia;
 	double saldo;
-	String dataAbertura;
+	Data dataAbertura = new Data();
 
 	public void sacar(double quantidade) {
 		if (this.saldo > quantidade) {

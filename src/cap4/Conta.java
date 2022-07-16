@@ -24,10 +24,15 @@ public class Conta {
 	}
 
 	public String recuperaDadosParaImpressao() {
-		return "Titular:" + this.nomeTitular +
-				" Numero: " + this.numero +
-				" Agencia: " + this.agencia + 
-				" Saldo: " + this.saldo + 
-				" Data Abertura: " + this.dataAbertura;
+		String dados = "\nTitular: " + this.nomeTitular;
+		
+		dados += "\nNumero: " + this.numero +
+				"\nAgencia: " + this.agencia + 
+				"\nSaldo: " + this.saldo + 
+				"\nData Abertura: " + 
+				"\n\tDia: " + this.dataAbertura.dia +
+				"\n\tMes: " + this.dataAbertura.mes + 
+				"\n\tAno: " + this.dataAbertura.ano;
+		return dados;
 	};
 }

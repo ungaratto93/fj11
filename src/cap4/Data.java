@@ -12,4 +12,7 @@ public class Data {
 		return LocalDateTime.now();
 	}
 	
+	public String formatada() {
+		return  + this.dia + "/" + this.mes + "/" + this.ano;
+	}
 }

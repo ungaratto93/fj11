@@ -1,7 +1,7 @@
 package cap4;
 
 public class Conta {
-	String nomeTitular;
+	String titular;
 	int numero;
 	String agencia;
 	double saldo;
@@ -24,15 +24,11 @@ public class Conta {
 	}
 
 	public String recuperaDadosParaImpressao() {
-		String dados = "\nTitular: " + this.nomeTitular;
-		
+		String dados = "\nTitular: " + this.titular;
 		dados += "\nNumero: " + this.numero +
 				"\nAgencia: " + this.agencia + 
 				"\nSaldo: " + this.saldo + 
-				"\nData Abertura: " + 
-				"\n\tDia: " + this.dataAbertura.dia +
-				"\n\tMes: " + this.dataAbertura.mes + 
-				"\n\tAno: " + this.dataAbertura.ano;
+				"\nData Abertura: " + this.dataAbertura.formatada();
 		return dados;
 	};
 }

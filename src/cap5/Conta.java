@@ -53,8 +53,8 @@ public class Conta {
 		this.saldo = this.saldo + quantidade;
 	};
 
-	public double calculaRendimento() {
-		return this.saldo * 0.1;
+	public double getRendimento() {
+		return this.getSaldo() * 0.1;
 	}
 
 	public String recuperaDadosParaImpressao() {

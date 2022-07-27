@@ -3,14 +3,35 @@ package cap5;
 import cap4.Data;
 
 public class Conta {
+	private static int indexador;
+	private int identificador;
+	
 	private String titular;
 	private int numero;
 	private String agencia;
 	private double saldo;
 	private Data dataAbertura = new Data();
 
+	public Conta() {
+		Conta.setIndexador();
+		this.identificador = Conta.getIndexador();
+	}
+	
 	public Conta(String titular) {
+		this();
 		this.titular = titular;
+	}
+	
+	private static int getIndexador() {
+		return Conta.indexador;
+	}
+	
+	private static void setIndexador() {
+		Conta.indexador++;
+	}
+	
+	public int getIdentificador() {
+		return this.identificador;
 	}
 	
 	public String getTitular() {

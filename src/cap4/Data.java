@@ -4,9 +4,9 @@ import java.time.LocalDateTime;
 
 public class Data {
 
-	private int dia = getCurrentLocalDateTime().getDayOfMonth();
-	private int mes = getCurrentLocalDateTime().getMonthValue();
-	private int ano = getCurrentLocalDateTime().getYear();
+	int dia = getCurrentLocalDateTime().getDayOfMonth();
+	int mes = getCurrentLocalDateTime().getMonthValue();
+	int ano = getCurrentLocalDateTime().getYear();
 	
 	private LocalDateTime getCurrentLocalDateTime() {
 		return LocalDateTime.now();

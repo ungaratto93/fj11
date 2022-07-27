@@ -9,6 +9,10 @@ public class Conta {
 	private double saldo;
 	private Data dataAbertura = new Data();
 
+	public Conta(String titular) {
+		this.titular = titular;
+	}
+	
 	public String getTitular() {
 		return this.titular;
 	}
